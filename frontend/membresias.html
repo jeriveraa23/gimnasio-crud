@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membresías - GymManager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <h1>🏋️ GymManager</h1>
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="membresias.html">Membresías</a>
+        <a href="reportes.html">Reportes</a>
+    </nav>
+    <div class="container">
+        <h2>Gestión de Membresías</h2>
+
+        <div id="mensaje" class="mensaje"></div>
+
+        <div class="form-card">
+            <h3 id="form-titulo">Nueva Membresía</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Cliente</label>
+                    <select id="cliente_id"></select>
+                </div>
+                <div class="form-group">
+                    <label>Plan</label>
+                    <select id="plan_id" onchange="calcularFechaFin()"></select>
+                </div>
+                <div class="form-group">
+                    <label>Fecha Inicio</label>
+                    <input type="date" id="fecha_inicio" onchange="calcularFechaFin()">
+                </div>
+                <div class="form-group">
+                    <label>Fecha Fin</label>
+                    <input type="date" id="fecha_fin">
+                </div>
+                <div class="form-group">
+                    <label>Precio (COP)</label>
+                    <input type="number" id="precio" placeholder="80000">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-primary" onclick="guardarMembresia()">Guardar</button>
+                <button class="btn btn-secondary" onclick="limpiarFormulario()">Cancelar</button>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cliente</th>
+                        <th>Plan</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Fin</th>
+                        <th>Precio</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-membresias"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/membresias.js"></script>
+</body>
+</html>

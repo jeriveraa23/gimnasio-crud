@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymManager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            border: none;
+            padding: 0;
+            margin-bottom: 16px;
+        }
+        .hero p {
+            color: #aaa;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        .hero-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero-card {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #f0f0f0;
+            border-top: 3px solid #e63946;
+            transition: transform 0.2s;
+        }
+        .hero-card:hover { transform: translateY(-4px); }
+        .hero-card .icon { font-size: 2rem; margin-bottom: 12px; }
+        .hero-card h3 { margin-bottom: 8px; }
+        .hero-card p { color: #aaa; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>🏋️ GymManager</h1>
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="membresias.html">Membresías</a>
+        <a href="reportes.html">Reportes</a>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <h2>Sistema de Gestión de Gimnasio</h2>
+            <p>Administra clientes, membresías y genera reportes en XML</p>
+            <div class="hero-cards">
+                <a href="clientes.html" class="hero-card">
+                    <div class="icon">👥</div>
+                    <h3>Clientes</h3>
+                    <p>Registra y administra los clientes del gimnasio</p>
+                </a>
+                <a href="membresias.html" class="hero-card">
+                    <div class="icon">🎫</div>
+                    <h3>Membresías</h3>
+                    <p>Gestiona membresías y controla su estado automáticamente</p>
+                </a>
+                <a href="reportes.html" class="hero-card">
+                    <div class="icon">📊</div>
+                    <h3>Reportes XML</h3>
+                    <p>Visualiza el árbol XML con totales y porcentajes</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

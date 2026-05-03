@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - GymManager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <h1>🏋️ GymManager</h1>
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="membresias.html">Membresías</a>
+        <a href="reportes.html">Reportes</a>
+    </nav>
+    <div class="container">
+        <h2>Reportes</h2>
+
+        <!-- ESTADÍSTICAS -->
+        <div class="stats-grid" id="stats-grid"></div>
+
+        <!-- ÁRBOL XML -->
+        <div class="form-card">
+            <h3>Árbol XML</h3>
+            <div class="form-actions" style="margin-bottom: 16px;">
+                <button class="btn btn-primary" onclick="cargarXML()">Generar XML</button>
+                <button class="btn btn-secondary" onclick="descargarXML()">Descargar XML</button>
+            </div>
+            <div class="xml-container">
+                <div id="xml-tree"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/reportes.js"></script>
+</body>
+</html>
