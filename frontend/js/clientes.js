@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000";
+const API_URL = "https://gimnasio-crud-api.onrender.com";
 let editandoId = null;
 
 async function cargarClientes() {
