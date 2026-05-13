@@ -215,3 +215,67 @@ tbody tr:hover {
 
 .mensaje-ok { background-color: #27ae60; color: white; }
 .mensaje-error { background-color: #c0392b; color: white; }
+
+/* EVALUACIONES */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla thead {
+    background-color: #e63946;
+}
+
+.tabla th, .tabla td {
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.tabla tbody tr:nth-child(even) {
+    background-color: #222;
+}
+
+.tabla tbody tr:hover {
+    background-color: #2a2a2a;
+}
+
+.btn-small {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e63946;
+}
+
+.stat-value.positivo {
+    color: #27ae60;
+}
+
+.stat-value.negativo {
+    color: #e63946;
+}
+
+#graficoContainer {
+    background-color: #1a1a1a;
+    padding: 24px;
+    border-radius: 10px;
+    position: relative;
+    height: 400px;
+}
+
+#graficoProgreso {
+    max-height: 400px;
+}

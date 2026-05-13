@@ -51,3 +51,22 @@ class Membresia(MembresiaBase):
     created_at: Optional[datetime] = None
     class Config:
         from_attributes = True
+
+# --- EVALUACIONES ---
+class EvaluacionBase(BaseModel):
+    cliente_id: int
+    fecha: date
+    peso: float
+    cintura: float
+    pecho: float
+    brazos: float
+    muslos: float
+
+class EvaluacionCreate(EvaluacionBase):
+    pass
+
+class Evaluacion(EvaluacionBase):
+    id: int
+    created_at: Optional[datetime] = None
+    class Config:
+        from_attributes = True

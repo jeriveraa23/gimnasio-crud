@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluaciones - GymManager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <h1>🏋️ GymManager</h1>
+        <a href="index.html">Inicio</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="membresias.html">Membresías</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="evaluaciones.html">Evaluaciones</a>
+    </nav>
+    <div class="container">
+        <h2>Seguimiento de Evaluaciones</h2>
+
+        <!-- NUEVA EVALUACIÓN -->
+        <div class="form-card">
+            <h3>Registrar Nueva Evaluación</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Cliente</label>
+                    <select id="clienteSelect">
+                        <option value="">Seleccionar cliente...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Fecha</label>
+                    <input type="date" id="fechaInput">
+                </div>
+                <div class="form-group">
+                    <label>Peso (kg)</label>
+                    <input type="number" id="pesoInput" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label>Cintura (cm)</label>
+                    <input type="number" id="cinturaInput" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label>Pecho (cm)</label>
+                    <input type="number" id="pechoInput" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label>Brazos (cm)</label>
+                    <input type="number" id="brazosInput" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label>Muslos (cm)</label>
+                    <input type="number" id="muslosInput" step="0.1">
+                </div>
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-primary" onclick="crearEvaluacion()">Guardar Evaluación</button>
+                <button class="btn btn-secondary" onclick="limpiarFormulario()">Limpiar</button>
+            </div>
+        </div>
+
+        <!-- GRÁFICAS DE PROGRESO -->
+        <div class="form-card">
+            <h3>Visualizar Progreso</h3>
+            <div class="form-group" style="max-width: 300px;">
+                <label>Seleccionar cliente para ver progreso</label>
+                <select id="clienteProgresoSelect" onchange="mostrarProgreso()">
+                    <option value="">Seleccionar cliente...</option>
+                </select>
+            </div>
+            <div id="graficoContainer" style="display:none; margin-top: 24px;">
+                <canvas id="graficoProgreso"></canvas>
+            </div>
+            <div id="resumenProgreso" style="display:none; margin-top: 24px;">
+                <div class="stats-grid" id="statsProgreso"></div>
+            </div>
+        </div>
+
+        <!-- TABLA DE EVALUACIONES -->
+        <div class="form-card">
+            <h3>Historial de Evaluaciones</h3>
+            <table id="evaluacionesTable" class="tabla">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Peso</th>
+                        <th>Cintura</th>
+                        <th>Pecho</th>
+                        <th>Brazos</th>
+                        <th>Muslos</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/evaluaciones.js"></script>
+</body>
+</html>
