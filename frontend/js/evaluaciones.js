@@ -1,4 +1,4 @@
-const API_URL = "https://gimnasio-crud.onrender.com"; // Cambiar si es necesario
+const API_URL = "https://gimnasio-crud-api.onrender.com";
 let clientesCache = [];
 let evaluacionesCache = [];
 let chart = null;
